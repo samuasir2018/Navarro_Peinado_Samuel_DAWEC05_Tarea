@@ -1,0 +1,198 @@
+/*en cuanto al CSS he cogido uno con unas animaciones ya diseniadas y una paleta de colores que me gusta
+para despues aniadir mis propias animaciones y configuracion de divs, tablas, enlaces etc, por lo que
+no es una plantilla con todo definido al uso, ni es puramente al 100% diseniado por mi*/
+nav {
+	margin: 27px auto 0;
+	position: relative;
+	width: 310px;
+	height: 50px;
+	background-color: #34495e;
+	border-radius: 8px;
+	font-size: 0;
+}
+nav a {
+	line-height: 50px;
+	height: 100%;
+	font-size: 15px;
+	display: inline-block;
+	position: relative;
+	z-index: 1;
+	text-decoration: none;
+	text-transform: uppercase;
+	text-align: center;
+	color: white;
+	cursor: pointer;
+}
+nav .animation {
+	position: absolute;
+	height: 100%;
+	top: 0;
+	z-index: 0;
+	transition: all .5s ease 0s;
+	border-radius: 8px;
+}
+a:nth-child(1) {
+	width: 100px;
+}
+a:nth-child(2) {
+	width: 110px;
+}
+a:nth-child(3) {
+	width: 100px;
+}
+
+nav .start-home, a:nth-child(1):hover~.animation {
+	width: 100px;
+	left: 0;
+	background-color: #1abc9c;
+}
+nav .start-about, a:nth-child(2):hover~.animation {
+	width: 110px;
+	left: 100px;
+	background-color: #e74c3c;
+}
+nav .start-blog, a:nth-child(3):hover~.animation {
+	width: 100px;
+	left: 210px;
+	background-color: #3498db;
+}
+
+body {
+	font-size: 12px;
+	font-family: sans-serif;
+	background: #2c3e50;
+}
+h1 {
+	text-align: center;
+	margin: 40px 0 40px;
+	text-align: center;
+	font-size: 30px;
+	color: #ecf0f1;
+	text-shadow: 2px 2px 4px #000000;
+	font-family: 'Cherry Swash', cursive;
+}
+
+.divP{
+	position: absolute;
+    bottom: 65px;
+    width: 100%;
+    text-align: center;
+    font-size: 10px;
+}
+p {
+    position: relative;
+	margin-top: 4%;
+    bottom: 20px;
+    width: 100%;
+    text-align: center;
+    color: #ecf0f1;
+    font-family: 'Cherry Swash',cursive;
+    font-size: 16px;
+}
+
+span {
+    color: #2BD6B4;
+}
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+.button {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+*{
+	padding: 0px;
+	margin:0px;
+}
+
+#divMenu{
+	width:500px;
+}
+
+ul, ol{
+	list-style:none;
+}
+
+.navMenu li a {
+	background-color:#010120;
+	color:#ffffff;
+	text-decoration:none; /*Quito el subrayado*/
+	padding:10px 15px; /*Relleno*/
+	display:inline-block;
+}
+
+/*Para los submenus coincidan debajo del menu grande*/
+.navMenu > li {
+	float:bottom;
+}
+
+.navMenu li a:hover {
+	background-color: #535353;
+}
+
+/*ajuste de posicion y que no salgan los menus si no esta el raton encima*/
+.navMenu li ul {
+	display:none;
+	position:absolute;
+	min-width:100%;
+}
+
+/*Lo utilizo para que cuando se ponga el raton encima se despliegue el menu*/
+.navMenu li:hover > ul {
+	display:block;
+}
+
+.button2 {background-color: #f44336; margin-top: 2%;}
+.button3 {background-color: #008CBA;}
+.button4 {background-color: #CAC8C0;}
+.button5 {background-color: #4ae403;}
+
+.imgSlide {display:none;}
+
+.imgContainer{
+	text-align: center;
+}
+#buttons{
+	text-align: center;
+}
+.imgSlide{
+	text-align: center;
+	position:relative;
+	margin-left: 25%;
+	width:50%;
+	height: 50%;
+}
+.buttonSlide{
+	margin-top: 1%;
+}
+
+#home{
+	text-align: right;
+	margin-right: 2%;
+}
+
+
+

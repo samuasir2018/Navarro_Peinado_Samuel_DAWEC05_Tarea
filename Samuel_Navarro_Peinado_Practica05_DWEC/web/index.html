@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="../css/estilo.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menu Practica 3 Samuel Navarro Peinado</title>
+</head>
+
+<body>
+  <h1>Galeria Samuel Navarro Peinado</h1>
+  <a href="index.html"></a>
+  <div id="home">
+    <a href="/Practica/web/index.html" class="button button5">Volver al inicio</a> 
+  </div>
+  <nav id="listCategorias">
+    <a type="button" id="Categoria1">Paisajes</a>
+    <a type="button" id="Categoria2">Animales</a>
+    <a type="button" id="Categoria3">Ciudades</a>
+    <div class="animation start-home"></div>
+  </nav>
+  <div>
+  </div>
+  <div id="divMenu">
+    <ul class="navMenu">
+      <li><a>Autores</a>
+        <ul id="listAuthors">
+          <li><a href="#" id="Autor1">Alonso</a></li>
+          <li><a href="#" id="Autor2">Javier</a></li>
+          <li><a href="#" id="Autor3">Lucia</a></li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+
+  <div class="imgContainer" id="carrouselImagenes">
+    <img class="imgSlide" id="imagen" src="./images/Default.jpg" style="width:50%">
+  </div>
+  <div id="buttons">
+    <button class="buttonSlide" onclick="plusDivs(-1)">Anterior</button>
+    <button class="" onclick="plusDivs(1)">Posterior</button><br>
+    <button id ="closePop" onclick="closeWindows()" class="button button2">Cerrar Ventanas</button><br>
+    <input type="button" id="botonHistoryBack" value="Volver a la página anterior" class="button button3"> 
+    <input type="button" id="botonHistoryNext" value="Ir a la página siguiente" class="button button4"> 
+  </div>
+  <p>Samuel Navarro Peinado</p>
+  <script type="module" src="view/loadData.js"></script>
+  <script type="module" src="./controller/manager.js"></script>
+  <script type="text/javascript" src="./controller/imagesManager.js"></script>
+
+  <script type="module">
+    import { mostrarImagenesCategoria, generarHistorial} from './controller/manager.js';
+    $("#Categoria1").click(function () {
+      mostrarImagenesCategoria("Paisajes");
+      plusDivs(1);
+      generarHistorial("Paisajes");
+    });
+  </script>
+
+  <script type="module">
+    import { mostrarImagenesCategoria, generarHistorial } from './controller/manager.js';
+    $("#Categoria2").click(function () {
+      mostrarImagenesCategoria("Animales");
+      plusDivs(1);
+      generarHistorial("Animales");
+    });
+  </script>
+
+  <script type="module">
+    import { mostrarImagenesCategoria, generarHistorial } from './controller/manager.js';
+    $("#Categoria3").click(function () {
+      mostrarImagenesCategoria("Ciudades");
+      plusDivs(1);
+      generarHistorial("Ciudades");
+    });
+  </script>
+
+
+  <script type="module">
+    import { mostrarImagenesAutor, generarHistorial } from './controller/manager.js';
+    $("#Autor1").click(function () {
+      mostrarImagenesAutor("Alonso");
+      plusDivs(1);
+      generarHistorial("Alonso");
+    });
+  </script>
+
+  <script type="module">
+    import { mostrarImagenesAutor, generarHistorial } from './controller/manager.js';
+    $("#Autor2").click(function () {
+      mostrarImagenesAutor("Javier");
+      plusDivs(1);
+      generarHistorial("Javier");
+    });
+  </script>
+
+  <script type="module">
+    import { mostrarImagenesAutor, generarHistorial } from './controller/manager.js';
+    $("#Autor3").click(function () {
+      mostrarImagenesAutor("Lucia");
+      plusDivs(1);
+      generarHistorial("Lucia");
+    });
+  </script>
+
+  <script type="module">
+    import { cargarDatos } from './controller/manager.js';
+    $(document).ready(function () {
+      cargarDatos();
+      var slideIndex = 1;
+      showDivs(slideIndex);
+      sessionStorage.setItem("array", []);
+    });
+  </script>
+
+<script type="module">
+  import { historyBack} from './controller/manager.js';
+  $("#botonHistoryBack").click(function () {
+    historyBack();
+    plusDivs(1);
+  });
+</script>
+<script type="module">
+  import { historyNext} from './controller/manager.js';
+  $("#botonHistoryNext").click(function () {
+    historyNext();
+    plusDivs(1);
+  });
+</script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" crossorigin="anonymous"></script>
+</body>
+
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/estiloImageData.css">
+    <title>Informacion de Imagen</title>
+</head>
+
+<body onload="showImageData()">
+    <h1>INFO DE IMAGENES</h1>
+    <!--Cuadros de texto para imprimir los datos de las imagenes-->
+    <div id="tituloDiv">
+        <label for="titulo"></label>
+        <input type="text" id="titulo" name="titulo" placeholder="Titulo de la imagen">
+    </div>
+    <div id="descripcionDiv">
+        <label for="descripcion"></label>
+        <input type="text" id="descripcion" name="descripcion" placeholder="Descripcion de la imagen">
+    </div>
+    <div id="urlDiv">
+        <label for="url"></label>
+        <input type="text" id="url" name="url" placeholder="URL de la imagen">
+    </div>
+    <div id="latitudDiv">
+        <label for="latitud"></label>
+        <input type="text" id="latitud" name="latitud" placeholder="Latitud de la imagen">
+    </div>
+    <div id="longitudDiv">
+        <label for="longitud"></label>
+        <input type="text" id="longitud" name="longitud" placeholder="Longitud de la imagen">
+    </div>
+    <script type="text/javascript" src="./view/loadImageData.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
